@@ -8,7 +8,7 @@ const Header = ({ currentUser }) => {
   return (
     <div className="header">
       <Link className="logo-container" to="/">
-        <span className="title">GREAT WALL OF CCATS</span>
+        <span className="title">GREAT WALL OF CATS</span>
         <span className="subtitle"></span>
       </Link>
 
@@ -16,6 +16,9 @@ const Header = ({ currentUser }) => {
         <a href="http://www.github.com/alpinstang/yarrt" className="option">
           GITHUB
         </a>
+        <Link className="option" to="/profile">
+          PROFILE
+        </Link>
         {currentUser ? (
           <div className="option" onClick={() => auth.signOut()}>
             SIGN OUT

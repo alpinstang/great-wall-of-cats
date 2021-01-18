@@ -1,5 +1,6 @@
 import React from "react";
 import "./profile.styles.scss";
+import { connect } from "react-redux";
 
 class Profile extends React.Component {
   constructor(props) {
@@ -12,6 +13,6 @@ class Profile extends React.Component {
   }
 }
 
-mapStateToProps = (state) => ({ cats: state.cats });
+const mapStateToProps = (state) => ({ cats: state.cats });
 
 export default connect(mapStateToProps)(Profile);

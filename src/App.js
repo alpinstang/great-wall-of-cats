@@ -6,6 +6,8 @@ import { setCurrentUser } from "./redux/user/user.actions";
 import Home from "./pages/home/home.page";
 import Header from "./components/header/header.component";
 import SignInSignUp from "./pages/signin/sign-in-sign-up.component";
+import Profile from "./pages/profile/profile.page";
+
 import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
 
 class App extends React.Component {
@@ -40,20 +42,25 @@ class App extends React.Component {
       <BrowserRouter>
         <Header />
         <Switch>
-          <div className="site-wrapper">
-            <Route
-              exact
-              path="/"
-              component={() => <Home currentUser={this.props.currentUser} />}
-            />
-            <Route
-              exact
-              path="/signin"
-              render={() =>
-                this.props.currentUser ? <Redirect to="/" /> : <SignInSignUp />
-              }
-            />
-          </div>
+          <Route
+            exact
+            path="/"
+            component={() => <Home currentUser={this.props.currentUser} />}
+          />
+          <Route
+            exact
+            path="/profile"
+            render={() =>
+              this.props.currentUser ? <Profile /> : <SignInSignUp />
+            }
+          />
+          <Route
+            exact
+            path="/signin"
+            render={() =>
+              this.props.currentUser ? <Redirect to="/" /> : <SignInSignUp />
+            }
+          />
         </Switch>
       </BrowserRouter>
     );
