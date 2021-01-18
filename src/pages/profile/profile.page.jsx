@@ -3,7 +3,7 @@ import "./profile.styles.scss";
 import { connect } from "react-redux";
 import { storage } from "../../firebase/firebase.utils";
 
-import { Image } from "react-bootstrap/Image";
+import { Image } from "react-bootstrap";
 
 class Profile extends React.Component {
   componentDidMount() {
