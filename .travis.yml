@@ -1,8 +1,11 @@
 language: node_js
-
 node_js:
   - "12"
-
 script:
   - npm test
   - npm run build
+deploy:
+  provider: heroku
+  app: great-wall-of-cats
+  api_key:
+    secure: etoaQqHxFAte5Cgk4zav1pW90lFuLYHm12DGaivyXxgL6EVZTnlGPRZ28wdI14Fj2SpEMJvDICwqHjfOtxJShnL2ZKSeeWCqMuEciJCtM7BDsc86P29LMrsgbEnSMx657HtOeFYIpNsszj0xYxEHB0oyzQIGLjPf4TqZIMQF9GY291No9dUdtfxSe7MAcEWiA4yjN2Gekk4hbuG6gBOZzcAXrIjbs/yEtsDaDyk1BhJyY53z5GkOI3wp3ZMCtNRWq31F/p3G02OfDx/TM8kuyoYifXRewU02hh39h1vCre+uW9czIYhha2wA9trmTsDHsn8SPfXvrhkm1YbIJUqM+CmFq4pAO4niUTF85gNdvbxiCDQhMohrs1fAKWSlj4wFspEoXCQqRkO1jzs1qbMW1SSOzk97ZoFzMn9kcbmBrHiGzX8JiJsG99wkDAC+iqJF8fpUfqJxp89SGYNTK/Rr28nW4t33SdRayITAym3HAx+t+f043Va1AwtmBlFUIwb9tRkPucUD7ig7dAgezgh4dcWYcHSnbX9//Cl3Jx8qURnUsuM15uTG6BC480vSFzyjnifuIb3RLgoy0UTbJHdfSF3m/v7/c5BjqfkWLINpTmfcKdr9ZQSqcBWKJRg8T14slbtMPER0AwNtBKCERTops0FcJvehju1vduqKBrhVpYY=
