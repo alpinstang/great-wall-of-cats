@@ -3,9 +3,13 @@ import "firebase/firestore";
 import "firebase/auth";
 
 const config = {
-  //
-  // PUT YOUR CONFIG HERE
-  //
+  apiKey: "AIzaSyBx-AFCVDNVd1Khw5MERcOhpsiyo9CCrUY",
+  authDomain: "great-wall-of-cats.firebaseapp.com",
+  projectId: "great-wall-of-cats",
+  storageBucket: "great-wall-of-cats.appspot.com",
+  messagingSenderId: "830046201670",
+  appId: "1:830046201670:web:8b11d7b16388fc2d9b6747",
+  measurementId: "G-ZQ8Q914FLS",
 };
 
 firebase.initializeApp(config);

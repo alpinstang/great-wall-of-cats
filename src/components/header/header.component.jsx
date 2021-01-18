@@ -8,8 +8,8 @@ const Header = ({ currentUser }) => {
   return (
     <div className="header">
       <Link className="logo-container" to="/">
-        <span className="title">Meow, Inc.</span>
-        <span className="subtitle">A kitty cat company</span>
+        <span className="title">GREAT WALL OF CCATS</span>
+        <span className="subtitle"></span>
       </Link>
 
       <div className="options">
