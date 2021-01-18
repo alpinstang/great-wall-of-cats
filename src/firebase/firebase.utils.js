@@ -1,6 +1,7 @@
 import firebase from "firebase/app";
 import "firebase/firestore";
 import "firebase/auth";
+import "firebase/storage";
 
 const config = {
   apiKey: "AIzaSyBx-AFCVDNVd1Khw5MERcOhpsiyo9CCrUY",
@@ -12,8 +13,13 @@ const config = {
   measurementId: "G-ZQ8Q914FLS",
 };
 
+// INITIALIZE APP
 firebase.initializeApp(config);
 
+// STORAGE
+export const storage = firebase.storage().ref();
+
+// USER AUTHENTICATION
 export const createUserProfileDocument = async (userAuth, additionalData) => {
   if (!userAuth) return;
 
